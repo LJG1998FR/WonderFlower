@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WonderFlower - Accueil{% endblock %}
+
+{% block body %}
+    <main class="home_container" {{ vue_component('Home/Main', { 'username': app.user.username ?? null, 'recentArticles': recentArticles }) }}></main>
+{% endblock %}
